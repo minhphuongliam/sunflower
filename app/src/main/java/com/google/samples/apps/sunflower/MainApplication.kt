@@ -26,9 +26,11 @@ class MainApplication : Application(), Configuration.Provider {
   override fun onCreate(){
     super.onCreate()
     Log.d("Sunflower", "App started!")
+
     //cần gọi cherypick
     val result = computeAdvanced(5) // cần cherry-pick computeBase + computeAdvanced
     Log.d("StartupLog", "Computed value: $result")
+
   }
   override val workManagerConfiguration: Configuration
     get() = Configuration.Builder()
