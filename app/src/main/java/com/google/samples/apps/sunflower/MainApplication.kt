@@ -25,6 +25,7 @@ import dagger.hilt.android.HiltAndroidApp
 class MainApplication : Application(), Configuration.Provider {
   override fun onCreate(){
     super.onCreate()
+    Log.d("Sunflower", "App started!")
     Log.d("Sunflower", "Sunflower is alive!")
   }
   override val workManagerConfiguration: Configuration
