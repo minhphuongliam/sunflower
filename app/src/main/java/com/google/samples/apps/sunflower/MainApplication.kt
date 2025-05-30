@@ -26,7 +26,6 @@ class MainApplication : Application(), Configuration.Provider {
   override fun onCreate(){
     super.onCreate()
     Log.d("Sunflower", "Sunflower is alive!")
-    Log.d("Sunflower", "App started!")
   }
   override val workManagerConfiguration: Configuration
     get() = Configuration.Builder()
