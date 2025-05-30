@@ -39,5 +39,8 @@ class MainApplication : Application(), Configuration.Provider {
   fun computeBase(value : Int) : Int {
     return value*2
   }
-
+  //hàm B phụ thuộc, cũng cần để chery pick
+  fun computeAdvanced(value :Int ):Int{
+    return computeBase(value) +10
+  }
 }
