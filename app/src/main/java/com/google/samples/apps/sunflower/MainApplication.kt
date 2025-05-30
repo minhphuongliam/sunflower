@@ -43,4 +43,8 @@ class MainApplication : Application(), Configuration.Provider {
   fun computeAdvanced(value :Int ):Int{
     return computeBase(value) +10
   }
+  //hàm C thừa thãi ở commit thứ 3, không pick cherry
+  fun debugLog(message : String ){
+    println("[DEBUG]: $message")
+  }
 }
