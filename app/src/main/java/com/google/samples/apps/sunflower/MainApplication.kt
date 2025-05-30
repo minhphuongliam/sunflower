@@ -26,10 +26,23 @@ class MainApplication : Application(), Configuration.Provider {
   override fun onCreate(){
     super.onCreate()
     Log.d("Sunflower", "App started!")
-    Log.d("Sunflower", "Sunflower is alive!")
+
+    //cần gọi cherypick
+    val result = computeAdvanced(5) // cần cherry-pick computeBase + computeAdvanced
+    Log.d("StartupLog", "Computed value: $result")
+
   }
   override val workManagerConfiguration: Configuration
     get() = Configuration.Builder()
       .setMinimumLoggingLevel(if (BuildConfig.DEBUG) android.util.Log.DEBUG else android.util.Log.ERROR)
       .build()
+
+  // tạo 2 hàm commit cần thiết để cherry pick
+  fun computeBase(value : Int) : Int {
+    return value*2
+  }
+  //hàm B phụ thuộc, cũng cần để chery pick
+  fun computeAdvanced(value :Int ):Int{
+    return computeBase(value) +10
+  }
 }
