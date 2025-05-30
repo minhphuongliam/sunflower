@@ -34,4 +34,10 @@ class MainApplication : Application(), Configuration.Provider {
     get() = Configuration.Builder()
       .setMinimumLoggingLevel(if (BuildConfig.DEBUG) android.util.Log.DEBUG else android.util.Log.ERROR)
       .build()
+
+  // tạo 2 hàm commit cần thiết để cherry pick
+  fun computeBase(value : Int) : Int {
+    return value*2
+  }
+
 }
